@@ -54,7 +54,7 @@ public class Clock {
 	}
 
 	public void setHour(int hour) {
-		this.hour = hour%MAXHOUR;
+		this.hour = (hour+MAXHOUR)%MAXHOUR;
 		notifyObserver();
 	}
 
@@ -63,7 +63,7 @@ public class Clock {
 	}
 
 	public void setMinute(int minute) {
-		this.minute = minute%MAXMINUTE;
+		this.minute = (minute+MAXMINUTE)%MAXMINUTE;
 		notifyObserver();
 	}
 
@@ -72,7 +72,7 @@ public class Clock {
 	}
 
 	public void setSecond(int second) {
-		this.second = second%MAXSECOND;
+		this.second = (second+MAXSECOND)%MAXSECOND;
 		notifyObserver();
 	}
 
