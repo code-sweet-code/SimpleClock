@@ -6,8 +6,17 @@ public class DisplayTimeState extends ClockState {
 
 	@Override
 	public void timerTick(Clock clock) {
+		int hour = clock.getHour();
+		int minute = clock.getMinute();
 		int second = clock.getSecond();
-		clock.setSecond(second+1);
+		if(second++ == 59){
+			if(minute++ == 59){
+				hour++;
+			}
+		}
+		clock.setHour(hour);
+		clock.setMinute(minute);
+		clock.setSecond(second);
 		super.timerTick(clock);
 	}
 
