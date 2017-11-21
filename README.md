@@ -1,0 +1,2 @@
+# SimpleClock
+State Pattern practice
